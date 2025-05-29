@@ -6,11 +6,11 @@ Ein kompaktes, kabelloses Fußpedal auf Basis des ESP32, das als Bluetooth-Tasta
 
 - **Zwei Tasten** mit jeweils zwei Funktionen:
   - **Kurzer Tastendruck**:
-    - Linke Taste: Blättert eine Seite zurück
-    - Rechte Taste: Blättert eine Seite vor
+    - Linke Taste: Blättert eine Seite zurück (PG_UP)
+    - Rechte Taste: Blättert eine Seite vor (PG_DOWN)
   - **Langer Tastendruck**:
-    - Linke Taste: Springt zum vorherigen Musikstück oder stoppt die Wiedergabe
-    - Rechte Taste: Startet die Wiedergabe oder springt zum nächsten Musikstück
+    - Linke Taste: Startet oder stoppt die Wiedergabe (MEDIA_START_PAUSE)
+    - Rechte Taste: Springt zum nächsten Musikstück (RIGHT)
 - **Bluetooth HID**: Das Pedal wird als Bluetooth-Tastatur erkannt
 - **Plattformunabhängig**: Funktioniert mit iOS, Android, Windows, macOS
 
@@ -23,23 +23,17 @@ Ein kompaktes, kabelloses Fußpedal auf Basis des ESP32, das als Bluetooth-Tasta
 
 ## 🔧 Software
 
-Die Firmware basiert auf der Arduino-Umgebung und verwendet die `ESP32 BLE Keyboard` Bibliothek.
-
-### Tastenzuweisung (Beispiel)
-
-| Taste        | Kurzer Druck | Langer Druck        |
-|--------------|--------------|---------------------|
-| Links        | `←` (Pfeil links) | `Media Stop / Previous Track` |
-| Rechts       | `→` (Pfeil rechts) | `Media Play / Next Track`     |
+Die Firmware basiert auf der Arduino-Umgebung und verwendet die `ESP32 BLE Keyboard` und `NimBLE-arduino` Bibliotheken.
 
 > Die genaue Tastenbelegung kann in der Firmware angepasst werden.
 
 ## 🛠️ Installation
 
-1. ESP32 mit Arduino IDE einrichten
+1. In VSCode PlattformIO und ESP32einrichen
 2. Bibliothek `ESP32 BLE Keyboard` installieren
-3. Firmware kompilieren und auf das ESP32-Board flashen
-4. Pedal mit Tablet oder Computer via Bluetooth koppeln
+3. Bibliothek `NumBLE-arduino` installieren
+4. Firmware kompilieren und auf das ESP32-Board flashen
+5. Pedal mit Tablet oder Computer via Bluetooth koppeln
 ## 📦 Gehäuse & Aufbau
 
 - Die Taster sollten robust und leicht erreichbar sein
